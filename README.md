@@ -9,7 +9,7 @@
 Basic setup:
 
 	$(document).ready(function() {
-	
+
 		var sc = $('#seat-map').seatCharts({
 			map: [
 				'aaaaaaaaaaaa',
@@ -24,7 +24,7 @@ Basic setup:
 					price   : 99.99,
 					classes : 'front-seat' //your custom CSS class
 				}
-			
+
 			},
 			click: function () {
 				if (this.status() == 'available') {
@@ -41,10 +41,10 @@ Basic setup:
 				}
 			}
 		});
-	
+
 		//Make all available 'c' seats unavailable
 		sc.find('c.available').status('unavailable');
-		
+
 		/*
 		Get seats with ids 2_6, 1_7 (more on ids later on),
 		put them in a jQuery set and change some css
@@ -52,9 +52,9 @@ Basic setup:
 		sc.get(['2_6', '1_7']).node().css({
 			color: '#ffcfcf'
 		});
-		
+
 		console.log('Seat 1_2 costs ' + sc.get('1_2').data().price + ' and is currently ' + sc.status('1_2'));
-	
+
 	});
 
 
@@ -76,7 +76,7 @@ Building maps is fairly easy with jQuery Seat Charts, you can literally pass an 
 Each single character represents a different type of seat and you have a freedom of choosing anyone but underscore **_**. Underscore is used to indicate that there shouldn't be any seat at a certain place. In our example I chose **a** seats to be the closest to the screen, **D** meant for disabled and **b** and **c** as just plain seats. I also built a corridor in the middle of our theatre, so people can conviniently reach their seats.
 
 Your chosen characters can carry a hash of data which is a great way to pass crucial seat details such as price or a description that you want to show on hover.
- 
+
 	seats: {
 		a: {
 			price       : 24.55,
@@ -147,7 +147,7 @@ Since JSC also works with *focus/blur* events, it features a special status call
 			*/
 			return this.style();
 		}
-		
+
 	},
 	focus  : function() {
 
@@ -170,7 +170,7 @@ Your site's popular and people fight for your tickets? Don't forget to update yo
 
 	//sc will contain a reference to the map
 	var sc = $('#sc-container').seatCharts({
-		//... 
+		//...
 	});
 
 	setInterval(function() {
@@ -179,7 +179,7 @@ Your site's popular and people fight for your tickets? Don't forget to update yo
 			url      : '/bookings/get/100',
 			dataType : 'json',
 			success  : function(response) {
-				//iterate through all bookings for our event 
+				//iterate through all bookings for our event
 				$.each(response.bookings, function(index, booking) {
 					//find seat by id and set its status to unavailable
 					sc.status(booking.seat_id, 'unavailable');
@@ -229,7 +229,7 @@ Click handler. Fired when user clicks on a seat or hits spacebar on a focused se
 
 			return this.style();
 		}
-		
+
 	},
 
 ### focus
@@ -298,7 +298,7 @@ ID may contain letters, numbers and underscores. Label can contain the same grou
 
 ### naming
 
-You can specify your own column and row labels as well as functions for generating seat ids and labels. 
+You can specify your own column and row labels as well as functions for generating seat ids and labels.
 
 **columns**
 
@@ -392,7 +392,7 @@ Find method lets you search using *character*, seat status, combination of both 
 	sc.find('unavailable'); //find all unavailable seats
 	sc.find('a.available'); //find all available a seats
 	sc.find(/^1_[0-9]+/); //find all seats in the first row
-	
+
 
 #### .get and .find chained together:
 
@@ -427,7 +427,7 @@ Iterates through a seat set, callback will be fired in the context of each eleme
 
 	sc.find('a.unavailable').each(function(seatId) {
 		console.log(this.data()); //display seat data
-	}); 
+	});
 
 You can break the loop returning *false*.
 
@@ -511,7 +511,7 @@ JavaScript:
 		}
 		//…
 	});
-	
+
 
 ### .seatCharts-legendList
 UL element which holds the legend.
