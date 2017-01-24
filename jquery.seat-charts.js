@@ -22,10 +22,10 @@
 			seatIds  = [],
 			legend,
 			settings = {
-				animate : false, //requires jQuery UI
+				animate : true, //requires jQuery UI
 				naming  : {
-					top    : true,
-					left   : true,
+					top    : false,
+					left   : false,
 					getId  : function(character, row, column) {
 						return row + '_' + column;
 					},
