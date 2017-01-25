@@ -22,7 +22,7 @@
 			seatIds  = [],
 			legend,
 			settings = {
-				animate : false, //requires jQuery UI
+				animate : true, //requires jQuery UI
 				naming  : {
 					top    : false,
 					left   : false,

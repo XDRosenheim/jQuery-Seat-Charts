@@ -1,64 +1,45 @@
-div.seatCharts-container {
-	/*min-width: 700px;*/
-}
 div.seatCharts-cell {
-
-	height: 16px;
-	width: 16px;
-	margin: 3px;
+	height: 22px;
+	width: 22px;
+	margin: 0px;
 	float: left;
 	text-align: center;
 	outline: none;
 	font-size: 13px;
-	line-height:16px;
-	color: blue;
-
+	line-height: 16px;
 }
 div.seatCharts-seat {
 	background-color: green;
 	color: white;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
 	cursor: default;
+	display: block;
+	align-items: center;
 }
 div.seatCharts-seat:focus {
 	border: none;
 }
-/*
-.seatCharts-seat:focus {
-	outline: none;
-}
-*/
-
 div.seatCharts-space {
-	background-color: white;
+	background-color: transparent;
 }
 div.seatCharts-row {
-	height: 50px;
+	height: 25px;
 }
-
 div.seatCharts-row:after {
 	clear: both;
 }
-
 div.seatCharts-seat.selected {
-	background-color: aqua;
+	background-color: blue;
 }
-
 div.seatCharts-seat.focused {
 	background-color: #6db131;
 }
-
 div.seatCharts-seat.available {
 	background-color: green;
 }
-
 div.seatCharts-seat.unavailable {
 	background-color: red;
 	cursor: not-allowed;
 }
-
 ul.seatCharts-legendList {
 	list-style: none;
 }
