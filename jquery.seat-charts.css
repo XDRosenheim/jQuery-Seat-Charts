@@ -1,12 +1,12 @@
 div.seatCharts-cell {
-	height: 22px;
-	width: 22px;
+	height: 25px;
+	width: 30px;
 	margin: 0px;
 	float: left;
 	text-align: center;
 	outline: none;
-	font-size: 13px;
-	line-height: 16px;
+	font-size: 9px;
+	line-height: 14px;
 }
 div.seatCharts-seat {
 	background-color: green;
